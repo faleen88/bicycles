@@ -2,3 +2,9 @@
 
 @import "global/variables.scss";
 @import "global/fonts.scss";
+@import "global/global.scss";
+
+// Blocks
+
+@import "blocks/visually-hidden.scss";
+@import "blocks/page.scss";
