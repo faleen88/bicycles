@@ -1,7 +1,7 @@
 .contacts ul {
   list-style: none;
   margin: 0;
-  padding: 0 203px 0 197px;
+  padding: 0 213px 0 197px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -11,20 +11,22 @@
   }
 
   @media (max-width: $tablet-width) {
-    width: 72%;
-    padding: 0 14%;
+    width: 71.5%;
+    padding: 0 15% 0 13.5%;
   }
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
     width: 268px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 22px 0 30px;
+    align-items: center;
   }
 }
 
 .contacts__link {
   font-size: 16px;
+  font-weight: 400;
   color: rgba(0, 0, 0, 0.5);
 
   &:hover {
@@ -32,24 +34,66 @@
   }
 
   &:active {
-    color: $accent;
+    color: $black;
   }
 
   &--email {
     line-height: 22px;
+    width: 268px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 22px;
+    }
   }
 
   &--email svg {
     fill: $accent;
     stroke: $accent;
+
+    @media (max-width: $tablet-width) {
+      padding-top: 3px;
+    }
+  }
+
+  &--email:hover svg {
+    fill: $black;
+    stroke: $black;
+  }
+
+  &--email:active svg {
+    fill: $black;
+    stroke: $black;
   }
 
   &--phone {
     line-height: 32px;
+    width: 190px;
+    margin-top: -4px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $mobile-width) {
+      padding-right: 20px;
+    }
   }
 
   &--phone svg {
     fill: none;
     stroke: $accent;
+    stroke-width: 2px;
+
+    @media (max-width: $tablet-width) {
+      padding-top: 3px;
+    }
+  }
+
+  &--phone:hover svg {
+    stroke: $black;
+  }
+
+  &--phone:active svg {
+    stroke: $black;
   }
 }
