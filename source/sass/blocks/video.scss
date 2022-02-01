@@ -1,0 +1,143 @@
+.video {
+  min-height: 706px;
+  margin-bottom: 248px;
+  background-color: $dark;
+  text-align: center;
+
+  @media (max-width: $tablet-width) {
+    min-height: 413px;
+    margin-bottom: 155px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 320px;
+    margin-bottom: 119px;
+  }
+}
+
+.video__container {
+  width: 930px;
+  margin: 0 auto;
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    padding: 0;
+    padding-top: 70px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding: 0;
+    padding-top: 84px;
+  }
+}
+
+.video__container h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0 150px;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.03em;
+  color: $white;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 50px;
+    font-size: 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 15px;
+    margin-bottom: 21px;
+  }
+}
+
+.video__container p {
+  margin: 0;
+  margin-bottom: 56px;
+  padding: 0 260px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  color: $white;
+  opacity: 0.7;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 15px;
+    margin-bottom: 53px;
+  }
+}
+
+.video__wrapper {
+  width: 930px;
+  height: 522px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: -98px;
+
+  @media (max-width: $tablet-width) {
+    width: 503px;
+    height: 282px;
+    margin-bottom: -85px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 288px;
+    height: 162px;
+    margin-bottom: -49px;
+  }
+}
+
+.video__wrapper img {
+  width: 930px;
+  height: 522px;
+  background-color: $black;
+
+  @media (max-width: $tablet-width) {
+    width: 503px;
+    height: 282px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 288px;
+    height: 162px;
+  }
+}
+
+.video__button {
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/play.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+
+  @media (max-width: $mobile-width) {
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  &:active {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.3;
+  }
+}

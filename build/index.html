@@ -114,17 +114,40 @@
         <h2>Виды велосипедов</h2>
         <div class="catalog__list">
           <div class="catalog__item catalog__item--road-bike">
-            <img src="img/road_bike.jpg">
+            <picture>
+              <source type="image/webp" srcset="img/mountain_bike.webp 1x, img/mountain_bike@2x.webp 2x">
+              <img src="img/road_bike.jpg" srcset="img/road_bike@2x.jpg 2x" alt="Дорожный велосипед с багажным отделением спереди">
+            </picture>
             <h3>Дорожный велосипед</h3>
           </div>
           <div class="catalog__item catalog__item--mountain-bike">
-            <img src="img/mountain_bike.jpg">
+            <picture>
+              <source type="image/webp" srcset="img/mountain_bike.webp 1x, img/mountain_bike@2x.webp 2x">
+              <img src="img/mountain_bike.jpg" srcset="img/mountain_bike@2x.jpg 2x" alt="Черный горный велосипед с зелеными надписями">
+            </picture>
             <h3>Горный велосипед</h3>
           </div>
           <div class="catalog__item catalog__item--children-bicycle">
-            <img src="img/children_bicycle.jpg">
+            <picture>
+              <source type="image/webp" srcset="img/children_bicycle.webp 1x, img/children_bicycle@2x.webp 2x">
+              <img src="img/children_bicycle.jpg" srcset="img/children_bicycle@2x.jpg 2x" alt="Детский розовый велосипед">
+            </picture>
             <h3>Детский велосипед</h3>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="video">
+      <div class="video__container">
+        <h2>Видео про велосипеды</h2>
+        <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+        <div class="video__wrapper">
+          <picture>
+            <source type="image/webp" srcset="img/bike_video.webp 1x, img/bike_video@2x.webp 2x">
+            <img src="img/bike_video.jpg" srcset="img/bike_video@2x.jpg 2x" alt="Черный велосипед">
+          </picture>
+          <button class="video__button"></button>
         </div>
       </div>
     </section>
@@ -143,6 +166,7 @@
       </section>
 
       <section class="main-footer__contacts contacts">
+        <h3 class="visually-hidden">Наши контакты</h3>
         <ul>
           <li>
             <a class="contacts__link contacts__link--email" href="mailto:puteshestviemechta@gmail.ru" aria-label="Наша почта puteshestviemechta@gmail.ru">
