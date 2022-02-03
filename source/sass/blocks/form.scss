@@ -21,25 +21,11 @@
   }
 }
 
-.form ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  @media (max-width: $tablet-width) {
-    padding-left: 2px;
-  }
-
-  @media (max-width: $mobile-width) {
-    padding-left: 0;
-  }
-}
-
-.form li {
+.form__field {
   margin-bottom: 20px;
 }
 
-.form input {
+.form__field input {
   width: 265px;
   min-height: 46px;
   padding: 0 30px;
