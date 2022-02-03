@@ -9,8 +9,8 @@
   margin-bottom: 150px;
 
   @media (max-width: $min-desktop-width) {
-    width: 70%;
-    padding: 0 15%;
+    width: 96%;
+    padding: 0 2%;
   }
 
   @media (max-width: $tablet-width) {
@@ -35,7 +35,7 @@
   grid-column-gap: 40px;
   grid-row-gap: 41px;
 
-  @media (max-width: $min-desktop-width) {
+  @media (max-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 30px;
   }
@@ -84,10 +84,12 @@
   letter-spacing: -0.03em;
 
   @media (max-width: $min-desktop-width) {
-    padding: 0 15%;
+    font-size: 19px;
+    padding: 0 2%;
   }
 
   @media (max-width: $tablet-width) {
+    font-size: 22px;
     padding: 0 3%;
   }
 

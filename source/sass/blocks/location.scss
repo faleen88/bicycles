@@ -41,6 +41,10 @@
   height: 530px;
   background: $accent url("../img/map.png") no-repeat center / cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map@2x.png");
+  }
+
   @media (max-width: $min-desktop-width) {
     width: 100%;
   }
