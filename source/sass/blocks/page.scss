@@ -6,8 +6,15 @@
 
 .page__body {
   min-width: 320px;
+  height: 100%;
   margin: 0;
   padding: 0;
   color: $black;
   background-color: $white;
+  display: flex;
+  flex-direction: column;
+}
+
+.page__content {
+  flex-grow: 1;
 }

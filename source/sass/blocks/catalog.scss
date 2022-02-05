@@ -66,6 +66,23 @@
   position: relative;
   margin: 0 25px;
   margin-bottom: 50px;
+  max-width: 342px;
+
+  &:nth-child(3n-2) {
+    padding-top: 10px;
+
+    @media (max-width: $tablet-width) {
+      padding-top: 0;
+    }
+  }
+
+  &:nth-child(3n-1) {
+    padding-top: 40px;
+
+    @media (max-width: $tablet-width) {
+      padding-top: 0;
+    }
+  }
 
   @media (max-width: $min-desktop-width) {
     width: 28%;
@@ -73,19 +90,22 @@
 
   @media (max-width: $tablet-width) {
     width: 270px;
+    padding-top: 0;
   }
 
   @media (max-width: $mobile-width) {
     margin-bottom: 42px;
   }
+}
+
+.catalog__item-container {
+  position: relative;
 
   &--road-bike {
-    padding-top: 10px;
-
     &::before {
       content: "";
       position: absolute;
-      top: 167px;
+      top: 157px;
       left: -60px;
       width: 126px;
       height: 126px;
@@ -97,26 +117,23 @@
         width: 91px;
         height: 91px;
         top: auto;
-        bottom: 28px;
+        bottom: -27px;
         left: -36px;
         border: 18px solid $accent;
       }
 
       @media (max-width: $mobile-width) {
-        bottom: 27px;
         left: -25px;
       }
     }
   }
 
   &--mountain-bike {
-    padding-top: 40px;
-
     &::before {
       content: "";
       position: absolute;
-      top: 22px;
-      left: -19px;
+      top: -19px;
+      left: -20px;
       width: 31px;
       height: 31px;
       border: 8px solid $accent;
@@ -130,8 +147,8 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: 32px;
-      right: -23px;
+      bottom: -22px;
+      right: -22px;
       width: 31px;
       height: 31px;
       border: 8px solid $accent;
@@ -172,7 +189,7 @@
   }
 }
 
-.catalog__item img {
+.catalog__item-container img {
   margin-bottom: 22px;
   position: relative;
   z-index: 2;
@@ -186,6 +203,10 @@
     object-fit: cover;
     border-radius: 10px;
   }
+}
+
+.catalog__item-container--children-bicycle img {
+  object-position: bottom;
 }
 
 .catalog__item h3 {

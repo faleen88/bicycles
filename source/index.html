@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Велосипеды</title>
+  <meta name="description" content="Велосипеды — большой выбор велосипедов по приемлемым ценам на любой вкус и возраст. Мы поможем подборать вам нужную модель велосипеда.">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/opensans-semibold.woff2" as="font">
 </head>
@@ -81,7 +82,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="page__content">
 
     <section class="about-us" id="about-us">
       <div class="about-us__container">
@@ -111,28 +112,34 @@
       <div class="catalog__container">
         <h2>Виды велосипедов</h2>
         <div class="catalog__list">
-          <div class="catalog__item catalog__item--road-bike">
-            <picture>
-              <source type="image/webp" srcset="img/road_bike.webp 1x, img/road_bike@2x.webp 2x">
-              <!-- 1х: 342px x 503px; 2x: 684px x 1006px -->
-              <img src="img/road_bike.jpg" srcset="img/road_bike@2x.jpg 2x" alt="Дорожный велосипед с багажным отделением спереди">
-            </picture>
+          <div class="catalog__item">
+            <div class="catalog__item-container catalog__item-container--road-bike">
+              <picture>
+                <source type="image/webp" srcset="img/road_bike.webp 1x, img/road_bike@2x.webp 2x">
+                <!-- 1х: 342px x 503px; 2x: 684px x 1006px -->
+                <img src="img/road_bike.jpg" srcset="img/road_bike@2x.jpg 2x" alt="Дорожный велосипед с багажным отделением спереди">
+              </picture>
+            </div>
             <h3>Дорожный велосипед</h3>
           </div>
-          <div class="catalog__item catalog__item--mountain-bike">
-            <picture>
-              <source type="image/webp" srcset="img/mountain_bike.webp 1x, img/mountain_bike@2x.webp 2x">
-              <!-- 1х: 342px x 566px; 2x: 684px x 1132px -->
-              <img src="img/mountain_bike.jpg" srcset="img/mountain_bike@2x.jpg 2x" alt="Черный горный велосипед с зелеными надписями">
-            </picture>
+          <div class="catalog__item">
+            <div class="catalog__item-container catalog__item-container--mountain-bike">
+              <picture>
+                <source type="image/webp" srcset="img/mountain_bike.webp 1x, img/mountain_bike@2x.webp 2x">
+                <!-- 1х: 342px x 566px; 2x: 684px x 1132px -->
+                <img src="img/mountain_bike.jpg" srcset="img/mountain_bike@2x.jpg 2x" alt="Черный горный велосипед с зелеными надписями">
+              </picture>
+            </div>
             <h3>Горный велосипед</h3>
           </div>
-          <div class="catalog__item catalog__item--children-bicycle">
-            <picture>
-              <source type="image/webp" srcset="img/children_bicycle.webp 1x, img/children_bicycle@2x.webp 2x">
-              <!-- 1х: 342px x 513px; 2x: 684px x 1026px -->
-              <img src="img/children_bicycle.jpg" srcset="img/children_bicycle@2x.jpg 2x" alt="Детский розовый велосипед">
-            </picture>
+          <div class="catalog__item">
+            <div class="catalog__item-container catalog__item-container--children-bicycle">
+              <picture>
+                <source type="image/webp" srcset="img/children_bicycle.webp 1x, img/children_bicycle@2x.webp 2x">
+                <!-- 1х: 342px x 513px; 2x: 684px x 1026px -->
+                <img src="img/children_bicycle.jpg" srcset="img/children_bicycle@2x.jpg 2x" alt="Детский розовый велосипед">
+              </picture>
+            </div>
             <h3>Детский велосипед</h3>
           </div>
         </div>
@@ -149,7 +156,7 @@
             <!-- 1х: 929px x 522px; 2x: 1858px x 1044px -->
             <img src="img/bike_video.jpg" srcset="img/bike_video@2x.jpg 2x" alt="Черный велосипед">
           </picture>
-          <button class="video__button"></button>
+          <button class="video__button" aria-label="Запустить видео"></button>
         </div>
       </div>
     </section>
@@ -191,6 +198,8 @@
 
     </div>
   </footer>
+
+  <div class="modal visually-hidden">Отправка формы выполнена</div>
 
   <script src="js/main.js"></script>
 

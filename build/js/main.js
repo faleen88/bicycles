@@ -1,6 +1,7 @@
 'use strict';
 
 var MIN_NAME_LENGTH = 1;
+var ALERT_SHOW_TIME = 4000;
 
 var siteBody = document.querySelector('.page__body');
 var mainNav = document.querySelector('.nav');
@@ -56,12 +57,9 @@ var phoneInput = formContact.querySelector('#phone');
 
 nameInput.addEventListener('input', function () {
   var valueName = nameInput.value;
-  var checkName = /[-\.;":'0-9]/;
 
   if (valueName < MIN_NAME_LENGTH) {
     nameInput.setCustomValidity('Введите ваше имя.');
-  } else if (checkName.test(valueName)) {
-    nameInput.setCustomValidity('Вводите только буквы.');
   } else {
     nameInput.setCustomValidity('');
   }
@@ -101,8 +99,19 @@ if (storagePhone) {
   phoneInput.value = storagePhone;
 }
 
+var modalSuccess = document.querySelector('.modal');
+
+var showAlert = function () {
+  modalSuccess.classList.remove('visually-hidden');
+
+  setTimeout(function () {
+    modalSuccess.classList.add('visually-hidden');
+  }, ALERT_SHOW_TIME);
+};
+
 formContact.addEventListener('submit', function (evt) {
   evt.preventDefault();
+
   if (!phoneInput.value && !nameInput.value) {
     evt.preventDefault();
   } else {
@@ -110,5 +119,7 @@ formContact.addEventListener('submit', function (evt) {
       localStorage.setItem('phone', phoneInput.value);
       localStorage.setItem('name', nameInput.value);
     }
+
+    showAlert();
   }
 });

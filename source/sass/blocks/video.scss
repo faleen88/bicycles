@@ -77,39 +77,25 @@
 }
 
 .video__wrapper {
-  width: 930px;
-  height: 522px;
-  margin: 0 auto;
   position: relative;
   margin-bottom: -98px;
 
   @media (max-width: $tablet-width) {
-    width: 503px;
-    height: 282px;
-    margin-bottom: -85px;
+    margin: 0 auto;
+    margin-bottom: -90px;
+    width: 65.5%;
   }
 
   @media (max-width: $mobile-width) {
-    width: 288px;
-    height: 162px;
     margin-bottom: -49px;
+    width: 90%;
   }
 }
 
 .video__wrapper img {
-  width: 930px;
-  height: 522px;
-  background-color: $black;
-
-  @media (max-width: $tablet-width) {
-    width: 503px;
-    height: 282px;
-  }
-
-  @media (max-width: $mobile-width) {
-    width: 288px;
-    height: 162px;
-  }
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
 .video__button {
