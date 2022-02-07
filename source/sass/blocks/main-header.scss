@@ -1,5 +1,5 @@
 .main-header {
-  margin-bottom: 155px;
+  margin-bottom: 150px;
   background: $dark url("../img/bike_bg.jpg") no-repeat center / cover;
 
   @media (min-resolution: 2dppx) {
@@ -17,16 +17,16 @@
 }
 
 .main-header__container {
-  width: 880px;
+  width: 970px;
   margin: 0 auto;
-  padding: 0 160px;
-  padding-bottom: 235px;
+  padding: 0 115px;
+  padding-bottom: 240px;
   display: grid;
-  grid-template-columns: 1fr 327px;
+  grid-template-columns: 1fr 372px;
 
   @media (max-width: $min-desktop-width) {
-    width: 74%;
-    padding: 0 13%;
+    width: 86%;
+    padding: 0 7%;
     padding-bottom: 235px;
   }
 
@@ -51,6 +51,7 @@
 .main-header__promo {
   padding-top: 50px;
   padding-right: 160px;
+  padding-left: 45px;
   grid-column: 1 / 2;
 
   @media (max-width: $min-desktop-width) {
@@ -73,6 +74,7 @@
 
 .main-header__form {
   grid-column: 2 / 3;
+  padding-right: 45px;
 
   @media (max-width: $tablet-width) {
     margin-top: 70px;

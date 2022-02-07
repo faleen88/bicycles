@@ -9,6 +9,7 @@
 .nav__logo {
   position: absolute;
   bottom: -25px;
+  left: 45px;
 
   @media (max-width: $tablet-width) {
     position: static;
@@ -110,13 +111,17 @@
   width: 100%;
   min-height: 32px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
 
-  @media (max-width: $min-desktop-width) {
-    width: 97%;
-    padding: 21px 1.5% 9px;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 90%;
+    height: 1px;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.2);
   }
 
   @media (max-width: $tablet-width) {
@@ -160,20 +165,17 @@
   }
 }
 
-nav li:not(:nth-child(4n)) {
-  margin-right: 95px;
+nav li {
+  margin: 0 6.9%;
 
   @media (max-width: $min-desktop-width) {
-    margin-right: 6.5%;
+    margin: 0 calc(7% - 15px);
   }
-}
-
-nav li {
-  padding: 0 20px;
 
   @media (max-width: $tablet-width) {
     width: 100%;
     min-height: 60px;
+    margin: 0;
     margin-bottom: 30px;
     padding: 0;
     background-color: $light;
